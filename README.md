@@ -1,5 +1,5 @@
 # my-katana-configuration
-Katana Configuration i like for my keyboard settings.
+Katana Configuration that I like for my keyboard.
 
 # Features
 - capslock is now backspace , and backspace is now capslock
