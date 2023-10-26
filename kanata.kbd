@@ -1,0 +1,65 @@
+(defcfg
+  process-unmapped-keys yes
+  log-layer-changes no
+)
+
+(defalias
+  cap (tap-hold 300 200 bspc (layer-while-held layer1))
+  cpy C-c
+  pst C-v
+  cut C-x
+  sav C-s
+  all C-a
+  dwd C-bks
+  dfd C-del
+  udo C-z
+  pwd C-left
+  nwd C-rght
+  cpl (macro home S-end C-c rght)
+  cul (macro home S-end C-x del)
+  plb (macro home C-v)
+  lb (layer-switch base)
+  l1 (layer-switch layer1)
+  l2 (layer-switch layer2)
+  ata A-tab
+  wtb M-tab
+)
+
+(defsrc
+	`		1 		2 		3 		4 		5				bspc
+			q 		w		e		r		t		y		u		i		o		p 
+	caps	a		s 		d 		f 		g 		h 		j 		k 		l 		; 
+			z		x 		c 		v 		b 		n 		m 		, 		.		/
+)
+
+(deflayer base 
+  ` 		1 		2 		3 		4 		5				caps
+			q 		w 		e 		r 		t  		y 		u 		i 		o 		p 
+  @cap  	a 		s 		d 		f 		g 		h 		j 		k 		l 		; 
+			z 		x 		c 		v 		b 		n 		m 		, 		.		/
+  
+  
+) 
+
+(deflayer layer1 
+  @lb 		@l1 	@l2 	3		4 		5  				caps
+			pgup 	@cpl 	@cul 	@plb 	@ata  	lrld 	home 	up 		end 	pgdn 
+  bspc 		@all 	@sav 	del 	@dfd 	@dwd 	enter 	left 	down 	rght 	bspc
+			@udo 	@cut 	@cpy 	@pst 	@wtb 	@pwd 	@nwd  	, 		.		/
+  
+  
+)
+
+(deflayer layer2 
+  @lb 		@l1 	@l2 	3 		4 		5 				caps
+			q 		w 		e 		r 		XX 		XX 		7 		8 		9 		XX 
+  @cap  	a 		s 		d 		f 		XX 		XX 		4 		5 		6 		0 
+			z 		x 		c 		v 		XX 		1 		2 		3 		.		bspc
+) 
+
+
+#|
+comments 
+go 
+here
+|#
