@@ -4,7 +4,7 @@
 )
 
 (defalias
-  cap (tap-hold 300 200 bspc (layer-while-held layer1))
+  cap (tap-hold 100 200 bspc (layer-while-held layer1))
   cpy C-c
   pst C-v
   cut C-x
