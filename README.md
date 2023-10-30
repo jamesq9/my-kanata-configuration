@@ -21,3 +21,7 @@ Katana Configuration that I like for my keyboard.
  - Layer 2 is num pad with u,i,o = 7,8,9 and j,k,l = 4,5,6 and nm,. = 123. and / = backspace
 
 These are the overview of my configuration file, please check the configuration file for more details.
+
+Kanata Project - https://github.com/jtroo/kanata
+
+To run this file during windows boot, create a shortcut to "C:\Windows\System32\conhost.exe --headless C:\kanata\kanata.exe --cfg C:\kanata\kanata.kbd" and place the file in shell:startup, please update the paths as needed.  
